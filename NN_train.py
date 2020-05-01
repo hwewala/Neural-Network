@@ -178,8 +178,8 @@ encoded_labels = encoder.transform(labels)
 y_train = np_utils.to_categorical(encoded_labels)
 
 model_name = 'test.h5'
-
-# create a Keras model: LOOK  INTO ADDING MORE/DIFFERENT KINDS OF LAYERS like Conv2D, MaxPooling2D, Dropout, Flatten
+L
+# create a Keras model for a multilayer perceptron with one hidden layer (multiclass classification so last layer is softmax activation)
 model = Sequential()
 model.add(Dense(hidden_nodes, activation='relu', input_shape=(input_nodes,), use_bias=False))
 model.add(Dense(hidden_nodes, activation='relu', input_shape=(hidden_nodes,), use_bias=False))
